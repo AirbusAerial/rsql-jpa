@@ -32,12 +32,13 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
  * Default implementation of {@linkplain ArgumentParser}. Supported types
- * are String, Integer, Long, Float, Boolean, Enum and Date. If neither one
+ * are String, Integer, Long, Float, Boolean, Enum, Date, and UUID. If neither one
  * of them match, it tries to invoke valueOf(String s) method via reflection on
  * the type's class.
  *
@@ -74,6 +75,7 @@ public class DefaultArgumentParser implements ArgumentParser {
             if (type.equals(Double.class)  || type.equals(double.class)) return (T) Double.valueOf(argument);
             if (type.equals(Long.class)    || type.equals(long.class)) return (T) Long.valueOf(argument);
             if (type.equals(BigDecimal.class) ) return (T) new BigDecimal(argument);
+            if (type.equals(UUID.class)) return (T) UUID.fromString(argument);
         } catch (IllegalArgumentException ex) {
             throw new ArgumentFormatException(argument, type);
         }

@@ -29,6 +29,7 @@ import static org.junit.Assert.fail;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.UUID;
 
 import org.junit.Test;
 
@@ -131,6 +132,11 @@ public class DefaultArgumentParserTest {
         argument = "2011-08-26T14:15:30";
         expected = new GregorianCalendar(2011, 7, 26, 14, 15, 30).getTime();
         actual = instance.parse(argument, Date.class);
+        assertEquals(expected, actual);
+
+        argument = "299bce8e-25fb-11e8-b467-0ed5f89f718b";
+        expected = UUID.fromString(argument);
+        actual = instance.parse(argument, UUID.class);
         assertEquals(expected, actual);
         
         try {
