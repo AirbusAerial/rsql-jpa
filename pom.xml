@@ -13,28 +13,13 @@
 	<description>A application used to translate  RSQL nodes to JPA Criteria Query.</description>
     <url>http://github.com/tennaito/rsql-jpa</url>
 
-    <!--//////////////////// LICENSE ////////////////////-->
-    <licenses>
-        <license>
-            <name>MIT</name>
-            <url>http://opensource.org/licenses/MIT</url>
-        </license>
-    </licenses>
-    
-    <!--//////////////////// DEVELOPER///////////////////-->
-    <developers>
-    	<developer>
-      		<name>Antonio Rabelo</name>
-    	</developer>
-	</developers>
-    
-	<!--//////////////////// SCM    ////////////////////-->
-    <scm>
-        <url>https://github.com/AirbusAerial/rsql-jpa/</url>
-        <connection>scm:git:https://github.com/AirbusAerial/rsql-jpa.git</connection>
-        <developerConnection>scm:git:https://github.com/AirbusAerial/rsql-jpa.git</developerConnection>
-    	<tag>HEAD</tag>
-  </scm>
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <name>Airbus Aerial Nexus</name>
+            <url>http://nexus.airbusaerial.com/repository/maven-public</url>
+        </repository>
+    </repositories>
 
     <!--//////////////////// PROPERTIES ////////////////////-->
 
