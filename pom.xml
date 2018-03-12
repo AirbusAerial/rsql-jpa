@@ -21,6 +21,14 @@
         </repository>
     </repositories>
 
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>Airbus Aerial Nexus</name>
+            <url>http://nexus.airbusaerial.com/repository/maven-public</url>
+        </repository>
+    </distributionManagement>
+
     <!--//////////////////// PROPERTIES ////////////////////-->
 
     <properties>
